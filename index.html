@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💕 專屬於你的網頁 💕</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 背景音樂 -->
+    <audio id="bgMusic">
+        <source src="images/音樂/(1).mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- 飄落愛心背景 -->
+    <div id="hearts-container"></div>
+
+    <!-- 主要內容 -->
+    <main>
+        <!-- 頭部區域 -->
+        <header class="hero">
+            <div style="display: flex; align-items: center; justify-content: center; gap: 50px;">
+                <div style="text-align: center;">
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 15px;">
+                        <button class="music-control-btn" onclick="prevTrack()">&#10094;</button>
+                        <button id="musicBtn" class="music-btn"></button>
+                        <button class="music-control-btn" onclick="nextTrack()">&#10095;</button>
+                    </div>
+                    <div style="margin-top: 10px; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                        <button class="music-control-btn" id="speedBtn" onclick="changeSpeed()">1x</button>
+                    </div>
+                    <p style="opacity: 0.6; font-size: 0.9rem; margin-top: 8px;">🎧 戴上耳機聽個音樂放鬆心情<br>點擊唱片機撥放/暫停音樂<br>(總共3首)</p>
+                </div>
+                <div>
+                    <h1>💕 我們生活的點點滴滴 💕</h1>
+                    <p class="subtitle">2022.03.06 - 2026.02.28</p>
+                </div>
+            </div>
+            <p class="birthday-wish" style="margin-top: 20px; font-size: 1.2rem; color: #ff6b6b;">🎂 祝小麻糬生日快樂，永遠都可以像小朋友一樣開開心心無憂無慮 🎂</p>
+            <div class="timer-container">
+                <p>我們曾經在一起</p>
+                <div id="timer">
+                    <span id="days">0</span> 天 <span id="hours">00</span> 時 <span id="minutes">00</span> 分 <span id="seconds">00</span> 秒
+                </div>
+                <p style="margin-top: 10px; opacity: 0.7; font-size: 0.9rem;">時間永遠停在這裡了</p>
+            </div>
+        </header>
+
+        <!-- 照片輪播 -->
+        <section class="gallery-section">
+            <h2>📸 我們的回憶</h2>
+            <div class="carousel">
+                <button class="carousel-btn prev" onclick="prevSlide()">&#10094;</button>
+                <div class="carousel-track" id="carouselTrack"></div>
+                <button class="carousel-btn next" onclick="nextSlide()">&#10095;</button>
+            </div>
+            <div class="dots-container" id="dotsContainer"></div>
+        </section>
+
+        <!-- 給他的話 -->
+        <section class="message-section">
+            <div class="message-card">
+                <p>其實到現在，我還是很常想起你。</p>
+                <p>想起在美廉社第一次遇見你的那天，</p>
+                <p>想起我們一起走過的那些路口，</p>
+                <p>想起曾經以為我們會一輩子走下去。</p>
+                <br>
+                <p>你出現以後，我真的覺得特別安心、特別幸福。</p>
+                <p>你真的特別好，</p>
+                <p>好到讓我這輩子，第一次這麼真心實意的去在乎一個人。</p>
+                <br>
+                <p>謝謝你陪我走過那段日子，雖然時間不算太長，</p>
+                <p>但那些一起笑、一起鬧的溫暖和快樂，</p>
+                <p>那些實實在在的開心，我都牢牢記在心裡。</p>
+                <br>
+                <p>現在想想也挺奇怪的，</p>
+                <p>明明我們也有過爭執、有過難過，我也偷偷掉過不少眼淚，</p>
+                <p>可我腦子裡全是你的好，</p>
+                <p>總想起你當初真心對我、護著我的樣子，</p>
+                <p>那些畫面真的很美好。</p>
+                <br>
+                <p>我們只是不聯繫了，</p>
+                <p>不再分享日常，不再頻繁聊天，</p>
+                <p>但我們從來都不是仇人。</p>
+                <p>就算以後的路不再同行，</p>
+                <p>你也依然是我人生裡，最鮮活的那段回憶。</p>
+                <br>
+                <p>我們不是熟悉的陌生人，</p>
+                <p>更不是相互討厭的人，</p>
+                <p>只是從那天起，我再也沒有問過你，什麼時候見面。</p>
+                <br>
+                <p>只是到現在，騎車經過我跟你去過的地方，</p>
+                <p>我還是會下意識的想，你會不會就在那邊。</p>
+                <br>
+                <p>我還在原地，</p>
+                <p>還抱著一點點小小的、很丟臉的希望。</p>
+                <br>
+                <p>如果你哪天想回頭了，</p>
+                <p>我還在這裡。</p>
+                <br>
+                <p style="opacity: 0.6; font-size: 0.9rem;">
+                    對了，這是我第一次學著寫程式做網頁，花了好多時間，
+                    <br>
+                    照片我選擇我們最後一次的第一次一起做的事情
+                </p>
+                <br>
+                <p style="opacity: 0.7; line-height: 1.8;">
+                    未來我們還有好多好多東西要學，
+                    <br>
+                    好多好多各自的第一次要體驗。
+                    <br>
+                    我們都要好好花時間，好好變成更好的人。
+                    <br>
+                    如果有需要，我們還是可以互相鼓勵，就像以前一樣。
+                </p>
+                <p class="signature">💖</p>
+            </div>
+        </section>
+
+        <!-- 照片牆 -->
+        <section class="photo-wall-section">
+            <h2>✨ 我們的第一次</h2>
+            <div class="photo-wall" id="photoWall"></div>
+            <p style="text-align: center; opacity: 0.6; font-size: 0.9rem; margin-top: 20px;">因為太多太多的第一次，所以選幾個重點放上來</p>
+        </section>
+
+        <!-- 美食路線 -->
+        <section class="photo-wall-section">
+            <h2>🍜 美食路線</h2>
+            <div class="photo-wall" id="foodWall"></div>
+            <p style="text-align: center; opacity: 0.6; font-size: 0.9rem; margin-top: 20px;">如果有需要加什麼路線可以跟我說</p>
+        </section>
+
+        <!-- 頁尾 -->
+        <footer>
+            <p>Made with 💖 | 永遠在一起</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
